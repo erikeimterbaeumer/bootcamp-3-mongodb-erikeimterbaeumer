@@ -2,9 +2,10 @@
   "name": "Assignment3",
   "version": "1.0.0",
   "description": "Persisting data using MongoDB and Mongoose",
-  "main": "index.js",
+  "main": "JSONtoMongo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon JSONtoMongo.js"
   },
   "author": "Medhir Bhargava",
   "license": "MIT",

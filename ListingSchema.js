@@ -5,11 +5,25 @@ var mongoose = require('mongoose'),
 /* Create your schema */
 var listingSchema = new Schema({
   /* your code here */
+code: String,
+name: String,
+coordinates: {
+  latitude: Number,
+  longitude: Number
+},
+address: String
 });
 
 /* create a 'pre' function that adds the updated_at (and created_at if not already there) property */
 listingSchema.pre('save', function(next) {
   /* your code here */
+  
+  next();
+
+  if (this.name == undefined || this.code == undefined) {
+    throw new Error('Uncaught AssertionError: expected null to exist'); 
+  }
+  
 });
 
 /* Use your schema to instantiate a Mongoose model */
